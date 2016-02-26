@@ -1,7 +1,7 @@
 Java Resource Pool
 ========
 
-Simple java resource pool that act on objects reference and reclaim unused ones posibly marked to be garbage collected.
+Simple java resource pool that act on objects reference and reclaim unused ones possibly marked to be garbage collected.
 Given a capacity for the pool size, client can request resources until that capacity is reached, when that happens
 new objects are created but the pool keep digging for unused resources and try to squeeze the slots that overflow the pool
 capacity trying to keep serving resources that fall into the pool capacity, in that way you are guarantee to get valid
