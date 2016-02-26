@@ -16,13 +16,13 @@ Usage
 
 There are an example included as a part of the repository, but to start playing just create an instance of the pool
 
-```
-    DeferredReferenceShelf<ByteBuffer> pool = new DeferredReferenceShelf<>(2, "Pool", new ResourceHandler<ByteBuffer>() {
+``` java
+
+    DeferredReferenceShelf<ByteBuffer> pool = new DeferredReferenceShelf<>(2, 
+        "Pool", new ResourceHandler<ByteBuffer>() {
         @Override
         public ByteBuffer create() {
-            ByteBuffer buffer = ByteBuffer.allocateDirect(4095);
-            System.out.println("Creating buffer " + System.identityHashCode(buffer));
-            return buffer;
+            ByteBuffer.allocateDirect(4095);
         }
 
         @Override
