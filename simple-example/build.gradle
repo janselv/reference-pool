@@ -1,0 +1,21 @@
+group 'com.jvra'
+version '1.0'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+configurations { providedCompile }
+sourceSets.main.compileClasspath += configurations.providedCompile
+sourceSets.test.compileClasspath += configurations.providedCompile
+sourceSets.test.runtimeClasspath += configurations.providedCompile
+
+
+dependencies {
+    compile project(project.parent.path)
+    testCompile files(project.parent.sourceSets.test.output)
+    providedCompile "javax.servlet:javax.servlet-api:3.+"
+}
+

@@ -1,0 +1,10 @@
+dist/
+build/
+.idea
+*.iml
+*.class
+.gradle/
+local.gradle
+
+
+
